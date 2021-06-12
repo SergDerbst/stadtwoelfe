@@ -63,6 +63,8 @@ export function tokenGetter() {
 			}
 		}
 	],
-	bootstrap: []
+	bootstrap: [
+		AppComponent
+	]
 })
 export class AppModule {}
