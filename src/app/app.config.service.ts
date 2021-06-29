@@ -1,5 +1,6 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
+import {tap} from "rxjs/operators";
 
 export interface AppConfig {
 	apiBaseUrl: string;
@@ -17,6 +18,7 @@ export class AppConfigService {
 			.toPromise()
 			.then(data => {
 				this.appConfig = data as AppConfig;
+				return data;
 			});
 	}
 	
